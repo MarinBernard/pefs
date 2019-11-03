@@ -1160,7 +1160,10 @@ main(int argc, char *argv[])
 			argv += 2;
 			optind = 0;
 			optreset = 1;
+			/* Disabled to support HardenedBSD systems built
+			   with the PAX_HARDENING option.
 			pefs_kld_load();
+			*/
 			return (cmd->func(argc, argv));
 		}
 	}
